@@ -52,5 +52,5 @@ app.use(express.json());
 
 app.use(router);
 
-// http://localhost:3000     <--Local
+// http://localhost:3000     
 app.listen(3000, () => console.log("conectado!"));
