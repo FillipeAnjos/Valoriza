@@ -3,16 +3,16 @@
 ## Regras
 
 - Cadastro de usuários
-  [ ] Não é permitido cadastrar mais de um usuário com o mesmo email.
+  [ x ] Não é permitido cadastrar mais de um usuário com o mesmo email.
 
-  [ ] não é permitido cadastrar usuário sem email.
+  [ x ] não é permitido cadastrar usuário sem email.
 
 - Cadastro de TAG
-  [ ] Não é permitido cadastrar mais de uma tag com o mesmo nnme.
+  [ x ] Não é permido cadastrar tag sem nome.
 
-  [ ] Não é permido cadastrar tag sem nome.
+  [ x ] Não é permitido cadastrar mais de uma tag com o mesmo nnme.
 
-  [ ] Não é permitido o cadastro por usuário que não sejamadministradores.
+  [ x ] Não é permitido o cadastro por usuário que não sejamadministradores.
 
 - Cadastro de elogios
   [ ] Não é permitido um usuário cadastrar um elogio para si.
