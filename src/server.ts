@@ -53,6 +53,17 @@ const app = express();
     npm add express-async-errors
 */
 
+/* 
+    JWT - Json Web Token
+    npm install jsonwebtoken -D
+*/
+
+/* 
+    bcryptjs - Biblioteca de criptografia
+    npm install bcryptjs
+    npm add @types/bcryptjs -D
+*/
+
 import "./database";
 
 app.use(express.json());
