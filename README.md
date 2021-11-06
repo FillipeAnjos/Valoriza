@@ -1,15 +1,11 @@
-## Projeto - VALORIZA
+# Projeto - VALORIZA
 
 ## Descrição - Valorize um amigo (a)! Ele (a) irá ficar feliz.
 ## Valoriza é uma aplicação com o intuitu de promover o reconhecimento entre companheiros de equipe ou de trabalho.
 
-# Esse projeto foi desenvolvido com as seguintes tecnologias:
+## Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-  Node.js
-  Typescript
-  Express
-  JSONWebToken
-  MySql
+  Node.js / Typescript / Express / JSONWebToken / MySql
 
 ## Regras
 
