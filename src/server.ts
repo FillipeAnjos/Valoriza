@@ -1,11 +1,13 @@
 import "reflect-metadata";
 import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors";
+import cors from "cors";
 
 import { router } from "./routes";
 
 // @types/express
 const app = express();
+app.use(cors());
 
 /* 
     Compilar o código de typescript para javascript automático
@@ -49,7 +51,7 @@ const app = express();
 */
 
 /* 
-    ----- Biblioteca de lifar com erros sysncronos no Express -----
+    ----- Biblioteca de lidar com erros sysncronos no Express -----
     npm add express-async-errors
 */
 
@@ -62,6 +64,17 @@ const app = express();
     bcryptjs - Biblioteca de criptografia
     npm install bcryptjs
     npm add @types/bcryptjs -D
+*/
+
+/* 
+    class-transformer - Biblioteca que permite transformar uma classe
+    npm add class-transformer
+*/
+
+/* 
+    Biblioteca CORS vai abilitar que outras fontes que não sejam aplicações backend consigam acessar a sua aplicação
+    npm add cors
+    npm add @types/cors - D
 */
 
 import "./database";
