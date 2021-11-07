@@ -49,3 +49,7 @@
 
   npm add cors
   npm add @types/cors - D
+
+  npm install express-handlebars
+
+  npm install body-parser
