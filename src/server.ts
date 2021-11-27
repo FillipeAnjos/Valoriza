@@ -2,12 +2,21 @@ import "reflect-metadata";
 import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors";
 import cors from "cors";
+import handlebars from "express-handlebars";
+import * as bodyParser from "body-parser";
 
 import { router } from "./routes";
 
 // @types/express
 const app = express();
 app.use(cors());
+
+app.use(function(req, res, next){
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+})
 
 /* 
     Compilar o código de typescript para javascript automático
@@ -77,8 +86,24 @@ app.use(cors());
     npm add @types/cors - D
 */
 
+/* 
+    handlebars - Biblioteca de Template Engine
+    npm install express-handlebars
+    ou
+    npm install --save express-handlebars
+*/
+
+/* 
+    body-parser - Biblioteca para passar os dados via formulário
+    npm install body-parser
+*/
+
 import "./database";
 
+app.engine('handlebars', handlebars({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+app.use(bodyParser.urlencoded({extended: false}));//Passar os dados via formulário
 app.use(express.json());
 
 app.use(router);

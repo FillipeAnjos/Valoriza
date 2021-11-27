@@ -3,7 +3,7 @@
 ### Descrição - Valorize um amigo (a)! Ele (a) irá ficar feliz.
 ### Valoriza é uma aplicação com o intuitu de promover o reconhecimento entre companheiros de equipe ou de trabalho.
 
-### Esse projeto foi desenvolvido com as seguintes tecnologias:
+## Esse projeto foi desenvolvido com as seguintes tecnologias:
 
   Node.js / Typescript / Express / JSONWebToken / MySql
 
@@ -29,7 +29,7 @@
   [ x ] O usuário precisa estar cadastrado na aplicação.
 
 
-## Instalações - Bibliotecas
+### Instalações - Bibliotecas
 
   npm i ts-node-dev --save-dev
 
@@ -49,3 +49,7 @@
 
   npm add cors
   npm add @types/cors - D
+
+  npm install express-handlebars
+
+  npm install body-parser

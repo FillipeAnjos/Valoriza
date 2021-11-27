@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { AuthenticateUserService } from "../services/AutehnticateUserService";
+import * as path from 'path';
 
 class AuthenticateUserController{
 
@@ -8,12 +9,17 @@ class AuthenticateUserController{
 
         const authenticateUserService = new AuthenticateUserService();
 
-        const token = await authenticateUserService.execute({
+        const resposta = await authenticateUserService.execute({
             email, 
             password
         });
 
-        return response.json(token);
+        response.render(path.join(__dirname, '../../src/views/home'), {
+            token: resposta['token'],
+            msg: resposta['msg']
+        });
+
+        //return response.json(resposta);
     }
 
 }

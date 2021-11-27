@@ -9,6 +9,7 @@ import { ListUserSendComplimentsController } from "./controllers/ListUserSendCom
 import { ListUserReceiveComplimentsController } from "./controllers/ListUserReceiveComplimentsController";
 import { ListTagsController } from "./controllers/LisTagsController";
 import { ListUsersController } from "./controllers/ListUsersController";
+import * as path from 'path';
 
 const router = Router();
 
@@ -21,16 +22,29 @@ const listUserReceiveComplimentsController = new ListUserReceiveComplimentsContr
 const listTagsController = new ListTagsController();
 const listUsersController = new ListUsersController();
 
+/* 
+    Rotas da API
+*/
 router.post("/tags", ensureAuthenticated, ensureAdmin, createTagController.handle);
 router.post("/users", createUserController.handle);
 router.post("/login", authenticateUserController.handle);
 router.post("/compliments", ensureAuthenticated, createComplimentController.handle);
-
 router.get("/users/compliments/send", ensureAuthenticated, listUserSendComplimentsControler.handle);
 router.get("/users/compliments/receive", ensureAuthenticated, listUserReceiveComplimentsController.handle);
-
 router.get("/tags", ensureAuthenticated, listTagsController.handle);
-
 router.get("/users", ensureAuthenticated, listUsersController.handle)
+
+/* 
+    Rotas do Frontend
+*/
+router.get("/", function(req, res){
+    res.render(path.join(__dirname, '../src/views/home'));
+});
+router.get("/home", function(req, res){
+    res.render(path.join(__dirname, '../src/views/home'));
+});
+router.get("/login", function(req, res){
+    res.render(path.join(__dirname, '../src/views/login'));
+});
 
 export { router }
